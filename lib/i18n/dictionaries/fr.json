@@ -163,7 +163,17 @@
             "days": {
                 "mon_fri": "Lun - Ven",
                 "sat": "Sam"
-            }
+            },
+            "address": [
+                "Ni BUJUMBURA-BURUNDI",
+                "Commune Mukaza, Q. Asiatique",
+                "Avenue de la Tanzanie no 20"
+            ],
+            "phones": [
+                "+257 123 456 78",
+                "+257 987 654 32"
+            ],
+            "mapLink": "https://maps.google.com/?q=-3.376968,29.351099"
         }
     },
     "gallery": {

@@ -43,17 +43,20 @@ export function Contact() {
     {
       icon: MapPin,
       title: t('contact.info.visit'),
-      lines: ["123 Construction Way", "Metro City, MC 12345"],
+      lines: t('contact.info.address') as string[],
+      href: t('contact.info.mapLink')
     },
     {
       icon: Phone,
       title: t('contact.info.call'),
-      lines: ["(555) 123-4567", "(555) 987-6543"],
+      lines: t('contact.info.phones') as string[],
+      href: "tel:+25712345678"
     },
     {
       icon: Mail,
       title: t('contact.info.email'),
       lines: ["info@ecobus.com", "projects@ecobus.com"],
+      href: "mailto:info@ecobus.com"
     },
     {
       icon: Clock,
@@ -166,23 +169,31 @@ export function Contact() {
           </div>
 
           <div className="flex flex-col gap-4">
-            {contactInfoData.map((info) => (
-              <Card key={info.title}>
-                <CardContent className="flex items-start gap-4 p-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <info.icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">{info.title}</h3>
-                    {info.lines.map((line) => (
-                      <p key={line} className="text-sm text-muted-foreground">
-                        {line}
-                      </p>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {contactInfoData.map((info) => {
+              const CardContentWrapper = info.href ? "a" : "div"
+              return (
+                <Card key={info.title} className={info.href ? "transition-colors hover:border-primary/50" : ""}>
+                  <CardContentWrapper
+                    href={info.href}
+                    target={info.href?.startsWith('http') ? "_blank" : undefined}
+                    rel={info.href?.startsWith('http') ? "noopener noreferrer" : undefined}
+                    className="flex items-start gap-4 p-4"
+                  >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                      <info.icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{info.title}</h3>
+                      {info.lines.map((line) => (
+                        <p key={line} className="text-sm text-muted-foreground">
+                          {line}
+                        </p>
+                      ))}
+                    </div>
+                  </CardContentWrapper>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building2, Home, Wrench, PaintBucket, HardHat, Ruler } from "lucide-react"
 import { useTranslation } from "@/lib/i18n/context"
@@ -51,28 +52,30 @@ export function Services() {
             const asset = serviceAssets[index] || serviceAssets[0]
             const Icon = asset.icon
             return (
-              <Card key={service.title} className="group overflow-hidden transition-all hover:shadow-xl hover:border-primary/50 flex flex-col h-full">
-                <div className="relative aspect-[16/9] w-full overflow-hidden">
-                  <Image
-                    src={asset.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
-                  <div className="absolute bottom-4 right-4 z-20 flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg transform translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <Icon className="h-6 w-6" />
+              <Link key={service.title} href={`/services/${index}`} className="flex h-full">
+                <Card className="group overflow-hidden transition-all hover:shadow-xl hover:border-primary/50 flex flex-col w-full h-full cursor-pointer">
+                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                    <Image
+                      src={asset.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
+                    <div className="absolute bottom-4 right-4 z-20 flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg transform translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                      <Icon className="h-6 w-6" />
+                    </div>
                   </div>
-                </div>
-                <CardHeader className="flex-1 pb-4">
-                  <CardTitle className="text-2xl mt-2 group-hover:text-primary transition-colors">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed mb-4">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                  <CardHeader className="flex-1 pb-4">
+                    <CardTitle className="text-2xl mt-2 group-hover:text-primary transition-colors">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed mb-4">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
             )
           })}
         </div>

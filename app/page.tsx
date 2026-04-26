@@ -16,7 +16,6 @@ export default function HomePage() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Services />
         <About />
         <Projects />
         <Process />

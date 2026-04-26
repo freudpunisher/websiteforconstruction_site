@@ -163,7 +163,17 @@
             "days": {
                 "mon_fri": "Mon - Fri",
                 "sat": "Sat"
-            }
+            },
+            "address": [
+                "Ni BUJUMBURA-BURUNDI",
+                "Mukaza District, Q. Asiatique",
+                "20 Tanzania Avenue"
+            ],
+            "phones": [
+                "+257 123 456 78",
+                "+257 987 654 32"
+            ],
+            "mapLink": "https://maps.google.com/?q=-3.376968,29.351099"
         }
     },
     "gallery": {

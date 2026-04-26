@@ -33,7 +33,7 @@ export function Hero() {
   ]
 
   return (
-    <section className="relative overflow-hidden h-screen min-h-[600px] flex items-center">
+    <section id="hero" className="relative overflow-hidden h-screen min-h-[600px] flex items-center">
       {/* Background Carousel */}
       <Carousel
         plugins={[plugin.current]}
