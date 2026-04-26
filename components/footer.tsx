@@ -151,7 +151,11 @@ export function Footer() {
             <div className="p-6 rounded-2xl bg-zinc-900/50 border border-white/5 space-y-4">
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-sky-400" />
-                <span className="text-sm font-bold tracking-widest">+257 123 456 78</span>
+                <span className="text-sm font-bold tracking-widest">+257 79 66 02 20</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="h-4 w-4 text-sky-400" />
+                <span className="text-sm font-bold tracking-widest">ecobus18@gmail.com</span>
               </div>
               <p className="text-xs text-zinc-500 leading-relaxed">Ni BUJUMBURA-BURUNDI, Mukaza District, Avenue de la Tanzanie no 20</p>
             </div>

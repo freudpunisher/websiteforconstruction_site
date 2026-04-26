@@ -34,7 +34,7 @@ export function Header() {
   const services = (t('services.items') as any[]) || []
 
   return (
-    <header className="fixed top-0 z-[100] w-full bg-white border-b border-zinc-200 h-35 shadow-sm">
+    <header className="fixed top-0 z-[100] w-full bg-white border-b border-zinc-200 h-[140px] shadow-sm">
       <div className="container mx-auto flex h-full items-center justify-between px-4 lg:px-8">
         {/* LOGO SECTION */}
         <Link href="/#hero" className="flex items-center relative z-[110]">
@@ -84,7 +84,7 @@ export function Header() {
         <div className="hidden items-center gap-6 lg:flex">
           <div className="flex items-center gap-2 text-[11px] font-bold text-zinc-600 uppercase tracking-widest">
             <Phone className="h-4 w-4 text-sky-500" />
-            <span>+257 123 456 78</span>
+            <span>+257 79 66 02 20</span>
           </div>
 
           <Select value={locale} onValueChange={(value) => setLocale(value as 'fr' | 'en')}>

@@ -93,7 +93,7 @@ export function Contact() {
 
         <div className="mt-16 grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <Card>
+            <Card className="h-full">
               <CardHeader>
                 <CardTitle>{t('contact.form.title')}</CardTitle>
                 <CardDescription>
@@ -130,7 +130,7 @@ export function Contact() {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone">{t('contact.form.phone')}</Label>
-                      <Input id="phone" type="tel" placeholder="(555) 000-0000" />
+                      <Input id="phone" type="tel" placeholder="+257 79 66 02 20" />
                     </div>
                     <div className="space-y-2 sm:col-span-2">
                       <Label htmlFor="projectType">{t('contact.form.projectType')}</Label>
@@ -171,12 +171,17 @@ export function Contact() {
           <div className="flex flex-col gap-4">
             {contactInfoData.map((info) => {
               const CardContentWrapper = info.href ? "a" : "div"
+              // Fix email for official address if it's the email card
+              const lines = info.title === t('contact.info.email') ? ["ecobus18@gmail.com"] : info.lines
+              const href = info.title === t('contact.info.email') ? "mailto:ecobus18@gmail.com" : info.href
+              const finalHref = info.title === t('contact.info.call') ? "tel:+25779660220" : href
+
               return (
-                <Card key={info.title} className={info.href ? "transition-colors hover:border-primary/50" : ""}>
+                <Card key={info.title} className={finalHref ? "transition-colors hover:border-primary/50" : ""}>
                   <CardContentWrapper
-                    href={info.href}
-                    target={info.href?.startsWith('http') ? "_blank" : undefined}
-                    rel={info.href?.startsWith('http') ? "noopener noreferrer" : undefined}
+                    href={finalHref}
+                    target={finalHref?.startsWith('http') ? "_blank" : undefined}
+                    rel={finalHref?.startsWith('http') ? "noopener noreferrer" : undefined}
                     className="flex items-start gap-4 p-4"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -184,7 +189,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold">{info.title}</h3>
-                      {info.lines.map((line) => (
+                      {lines.map((line) => (
                         <p key={line} className="text-sm text-muted-foreground">
                           {line}
                         </p>
@@ -194,6 +199,20 @@ export function Contact() {
                 </Card>
               )
             })}
+
+            {/* Map Card */}
+            <Card className="overflow-hidden h-full min-h-[300px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3986.32688006198!2d29.34852407423984!3d-3.376967996603204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zM8KwMjInMzcuMSJTIDI5wrAyMCc1NC4wIkU!5e0!3m2!1sen!2sbi!4v1714152000000!5m2!1sen!2sbi"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </Card>
           </div>
         </div>
       </div>
