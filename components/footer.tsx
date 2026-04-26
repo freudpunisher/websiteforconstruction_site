@@ -1,32 +1,4 @@
-import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-
-const footerLinks = {
-  services: [
-    { href: "#services", label: "Commercial Construction" },
-    { href: "#services", label: "Residential Construction" },
-    { href: "#services", label: "Renovation & Remodeling" },
-    { href: "#services", label: "Interior Finishing" },
-    { href: "#services", label: "Design-Build" },
-  ],
-  company: [
-    { href: "#about", label: "About Us" },
-    { href: "#projects", label: "Our Projects" },
-    { href: "#process", label: "Our Process" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#", label: "Careers" },
-  ],
-  resources: [
-    { href: "#", label: "Blog" },
-    { href: "#", label: "FAQs" },
-    { href: "#", label: "Safety Guidelines" },
-    { href: "#", label: "Sustainability" },
-    { href: "#contact", label: "Contact" },
-  ],
-}
+import { useTranslation } from "@/lib/i18n/context"
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
@@ -36,6 +8,30 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const { t } = useTranslation()
+
+  const footerLinks = {
+    services: [
+      { href: "/services", label: t('services.items')[0].title },
+      { href: "/services", label: t('services.items')[1].title },
+      { href: "/services", label: t('services.items')[2].title },
+      { href: "/services", label: t('services.items')[3].title },
+      { href: "/services", label: t('services.items')[4].title },
+    ],
+    company: [
+      { href: "/#about", label: t('nav.about') },
+      { href: "/#projects", label: t('nav.projects') },
+      { href: "/#process", label: t('nav.process') },
+      { href: "/gallery", label: t('nav.gallery') },
+    ],
+    resources: [
+      { href: "#", label: "Blog" },
+      { href: "#", label: "FAQs" },
+      { href: "/articles", label: t('nav.articles') },
+      { href: "/#contact", label: t('nav.contact') },
+    ],
+  }
+
   return (
     <footer className="border-t bg-foreground text-background">
       <div className="container mx-auto px-4 py-16 lg:px-8 lg:py-24">
@@ -60,7 +56,7 @@ export function Footer() {
             </div>
             <div>
               <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-background/70">
-                Company
+                {t('nav.about')}
               </h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
@@ -107,20 +103,19 @@ export function Footer() {
               </div>
             </div>
             <p className="mb-6 text-sm text-background/70 max-w-md">
-              Building excellence since 1999. We&apos;re committed to delivering exceptional
-              construction architecture with integrity, quality, and innovation.
+              {t('about.description')}
             </p>
             <div className="mb-6">
-              <h3 className="mb-3 text-sm font-semibold">Subscribe to Our Newsletter</h3>
+              <h3 className="mb-3 text-sm font-semibold">{t('footer.newsletter')}</h3>
               <form className="flex gap-2">
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t('footer.placeholder')}
                   className="bg-background/10 border-background/20 text-background placeholder:text-background/50"
                 />
                 <Button type="submit">
                   <Mail className="h-4 w-4 mr-2" />
-                  Subscribe
+                  {t('footer.subscribe')}
                 </Button>
               </form>
             </div>
@@ -141,17 +136,17 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-background/10 pt-8 sm:flex-row">
           <p className="text-sm text-background/50">
-            &copy; {new Date().getFullYear()} Ecobus Construction. All rights reserved.
+            &copy; {new Date().getFullYear()} Ecobus Construction. {t('footer.rights')}
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-sm text-background/50 hover:text-primary">
-              Privacy Policy
+              {t('footer.privacy')}
             </Link>
             <Link href="#" className="text-sm text-background/50 hover:text-primary">
-              Terms of Service
+              {t('footer.terms')}
             </Link>
             <Link href="#" className="text-sm text-background/50 hover:text-primary">
-              Licenses
+              {t('footer.licenses')}
             </Link>
           </div>
         </div>

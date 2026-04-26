@@ -65,8 +65,18 @@ const projects = [
   },
 ]
 
+import { useTranslation } from "@/lib/i18n/context"
+
 export function Projects() {
+  const { t } = useTranslation()
   const [activeCategory, setActiveCategory] = useState("All")
+
+  const categories = [
+    { key: "All", label: t('projects.categories.all') },
+    { key: "Commercial", label: t('projects.categories.commercial') },
+    { key: "Residential", label: t('projects.categories.residential') },
+    { key: "Renovation", label: t('projects.categories.renovation') },
+  ]
 
   const filteredProjects = activeCategory === "All"
     ? projects
@@ -77,26 +87,25 @@ export function Projects() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">
-            Our Portfolio
+            {t('projects.badge')}
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-balance lg:text-4xl">
-            Featured Projects
+            {t('projects.title')}
           </h2>
           <p className="mt-6 text-lg text-muted-foreground text-pretty">
-            Explore our diverse portfolio of completed projects showcasing our
-            commitment to excellence across commercial, residential, and renovation work.
+            {t('projects.description')}
           </p>
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           {categories.map((category) => (
             <Button
-              key={category}
-              variant={activeCategory === category ? "default" : "outline"}
+              key={category.key}
+              variant={activeCategory === category.key ? "default" : "outline"}
               size="sm"
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(category.key)}
             >
-              {category}
+              {category.label}
             </Button>
           ))}
         </div>

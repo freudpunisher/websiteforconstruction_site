@@ -32,9 +32,35 @@ const contactInfo = [
   },
 ]
 
+import { useTranslation } from "@/lib/i18n/context"
+
 export function Contact() {
+  const { t } = useTranslation()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+
+  const contactInfoData = [
+    {
+      icon: MapPin,
+      title: t('contact.info.visit'),
+      lines: ["123 Construction Way", "Metro City, MC 12345"],
+    },
+    {
+      icon: Phone,
+      title: t('contact.info.call'),
+      lines: ["(555) 123-4567", "(555) 987-6543"],
+    },
+    {
+      icon: Mail,
+      title: t('contact.info.email'),
+      lines: ["info@ecobus.com", "projects@ecobus.com"],
+    },
+    {
+      icon: Clock,
+      title: t('contact.info.hours'),
+      lines: [`${t('contact.info.days.mon_fri')}: 7AM - 6PM`, `${t('contact.info.days.sat')}: 8AM - 2PM`],
+    },
+  ]
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -52,14 +78,13 @@ export function Contact() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary">
-            Get In Touch
+            {t('contact.badge')}
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-balance lg:text-4xl">
-            Start Your Project Today
+            {t('contact.title')}
           </h2>
           <p className="mt-6 text-lg text-muted-foreground text-pretty">
-            Ready to bring your construction project to life? Contact us for a free
-            consultation and let&apos;s discuss how we can help.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -67,9 +92,9 @@ export function Contact() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle>Request a Quote</CardTitle>
+                <CardTitle>{t('contact.form.title')}</CardTitle>
                 <CardDescription>
-                  Fill out the form below and our team will get back to you within 24 hours.
+                  {t('contact.form.description')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -78,42 +103,42 @@ export function Contact() {
                     <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                       <Send className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-semibold">Thank You!</h3>
+                    <h3 className="text-xl font-semibold">{t('contact.form.successTitle')}</h3>
                     <p className="mt-2 text-muted-foreground">
-                      We&apos;ve received your message and will be in touch shortly.
+                      {t('contact.form.successMessage')}
                     </p>
                     <Button className="mt-6" onClick={() => setSubmitted(false)}>
-                      Send Another Message
+                      {t('contact.form.anotherMessage')}
                     </Button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
+                      <Label htmlFor="firstName">{t('contact.form.firstName')}</Label>
                       <Input id="firstName" placeholder="John" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
+                      <Label htmlFor="lastName">{t('contact.form.lastName')}</Label>
                       <Input id="lastName" placeholder="Doe" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t('contact.form.email')}</Label>
                       <Input id="email" type="email" placeholder="john@example.com" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone</Label>
+                      <Label htmlFor="phone">{t('contact.form.phone')}</Label>
                       <Input id="phone" type="tel" placeholder="(555) 000-0000" />
                     </div>
                     <div className="space-y-2 sm:col-span-2">
-                      <Label htmlFor="projectType">Project Type</Label>
+                      <Label htmlFor="projectType">{t('contact.form.projectType')}</Label>
                       <Select>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select project type" />
+                          <SelectValue placeholder={t('contact.form.projectPlaceholder')} />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="commercial">Commercial Construction</SelectItem>
-                          <SelectItem value="residential">Residential Construction</SelectItem>
-                          <SelectItem value="renovation">Renovation & Remodeling</SelectItem>
+                          <SelectItem value="commercial">{t('projects.categories.commercial')} {t('nav.services')}</SelectItem>
+                          <SelectItem value="residential">{t('projects.categories.residential')} {t('nav.services')}</SelectItem>
+                          <SelectItem value="renovation">{t('projects.categories.renovation')} & Remodeling</SelectItem>
                           <SelectItem value="interior">Interior Finishing</SelectItem>
                           <SelectItem value="design-build">Design-Build</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
@@ -121,17 +146,17 @@ export function Contact() {
                       </Select>
                     </div>
                     <div className="space-y-2 sm:col-span-2">
-                      <Label htmlFor="message">Project Details</Label>
+                      <Label htmlFor="message">{t('contact.form.details')}</Label>
                       <Textarea
                         id="message"
-                        placeholder="Tell us about your project, timeline, and any specific requirements..."
+                        placeholder={t('contact.form.detailsPlaceholder')}
                         className="min-h-[120px]"
                         required
                       />
                     </div>
                     <div className="sm:col-span-2">
                       <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-                        {isSubmitting ? "Sending..." : "Submit Request"}
+                        {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
                       </Button>
                     </div>
                   </form>
@@ -141,7 +166,7 @@ export function Contact() {
           </div>
 
           <div className="flex flex-col gap-4">
-            {contactInfo.map((info) => (
+            {contactInfoData.map((info) => (
               <Card key={info.title}>
                 <CardContent className="flex items-start gap-4 p-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">

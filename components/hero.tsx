@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay"
+import { useTranslation } from "@/lib/i18n/context"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
@@ -20,9 +21,16 @@ const highlights = [
 ]
 
 export function Hero() {
+  const { t } = useTranslation()
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
   )
+
+  const highlights = [
+    t('hero.experience'),
+    t('hero.projects'),
+    t('hero.licensed'),
+  ]
 
   return (
     <section className="relative overflow-hidden h-screen min-h-[600px] flex items-center">
@@ -72,31 +80,29 @@ export function Hero() {
       <div className="container relative z-20 mx-auto px-4 lg:px-8">
         <div className="max-w-3xl flex flex-col gap-6 text-white pt-16">
           <Badge className="w-fit bg-primary/90 text-primary-foreground hover:bg-primary/90 border-none px-4 py-1 text-sm font-medium">
-            Trusted Construction Partner Since 1999
+            {t('hero.badge')}
           </Badge>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-balance lg:text-5xl xl:text-7xl text-white">
-            Building Your Vision with{" "}
-            <span className="text-primary-foreground underline decoration-primary underline-offset-8 decoration-4">Precision & Excellence</span>
+            {t('hero.title')}{" "}
+            <span className="text-primary-foreground underline decoration-primary underline-offset-8 decoration-4">{t('hero.titleAccent')}</span>
           </h1>
           <p className="text-lg leading-relaxed text-white/90 text-pretty lg:text-xl font-medium max-w-2xl">
-            From concept to completion, Ecobus Construction delivers exceptional
-            commercial and residential construction services. We transform your ideas
-            into reality with unmatched craftsmanship and attention to detail.
+            {t('hero.description')}
           </p>
           <div className="flex flex-col gap-4 sm:flex-row pt-4">
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 px-8 text-base shadow-lg hover:scale-105 transition-transform duration-300">
               <Link href="#contact">
-                Start Your Project
+                {t('hero.ctaPrimary')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-black bg-transparent h-12 px-8 text-base shadow-lg hover:scale-105 transition-transform duration-300">
-              <Link href="#projects">View Our Work</Link>
+              <Link href="#projects">{t('hero.ctaSecondary')}</Link>
             </Button>
           </div>
           <div className="flex flex-wrap gap-6 pt-8">
             {highlights.map((item) => (
-              <div key={item} className="flex items-center gap-3">
+              <div key={typeof item === 'string' ? item : 'highlight'} className="flex items-center gap-3">
                 <CheckCircle2 className="h-6 w-6 text-primary" />
                 <span className="text-base font-semibold text-white drop-shadow-md">{item}</span>
               </div>

@@ -30,20 +30,23 @@ const articles = [
     },
 ]
 
+import { useTranslation } from "@/lib/i18n/context"
+
 export function Articles() {
+    const { t } = useTranslation()
     return (
         <section id="articles" className="bg-background py-24 lg:py-32">
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="mb-16 flex flex-col items-center justify-between gap-6 md:flex-row text-center md:text-left">
                     <div className="max-w-2xl flex flex-col gap-5">
-                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Latest Articles</h2>
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('articles.title')}</h2>
                         <p className="text-muted-foreground text-lg">
-                            Insights, industry news, and expert tips from our team of seasoned professionals.
+                            {t('articles.description')}
                         </p>
                     </div>
                     <Button variant="outline" size="lg" className="shrink-0" asChild>
                         <Link href="#articles">
-                            View All Articles
+                            {t('articles.viewAll')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
@@ -81,7 +84,7 @@ export function Articles() {
                                     {article.excerpt}
                                 </p>
                                 <div className="mt-auto flex items-center text-sm font-semibold text-primary">
-                                    Read Article
+                                    {t('articles.readMore')}
                                     <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </div>
                             </div>

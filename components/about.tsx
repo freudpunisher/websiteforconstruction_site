@@ -17,7 +17,20 @@ const values = [
   "Long-term relationships with clients and partners",
 ]
 
+import { useTranslation } from "@/lib/i18n/context"
+
 export function About() {
+  const { t } = useTranslation()
+
+  const stats = [
+    { icon: Award, value: "25+", label: t('about.stats.years') },
+    { icon: Users, value: "150+", label: t('about.stats.team') },
+    { icon: Clock, value: "500+", label: t('about.stats.projects') },
+    { icon: Shield, value: "100%", label: t('about.stats.satisfaction') },
+  ]
+
+  const values = t('about.principles') as string[]
+
   return (
     <section id="about" className="bg-secondary/30 py-24 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
@@ -44,23 +57,20 @@ export function About() {
           <div className="flex flex-col gap-6">
             <div>
               <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
-                About Ecobus
+                {t('about.badge')}
               </p>
               <h2 className="text-3xl font-bold tracking-tight text-balance lg:text-4xl">
-                Building Excellence Since 1999
+                {t('about.title')}
               </h2>
             </div>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              For over two decades, Ecobus Construction has been the trusted partner
-              for commercial and residential construction projects across the region.
-              Our team of 150+ skilled professionals brings expertise, dedication, and
-              innovation to every project we undertake.
+              {t('about.description')}
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              We believe that exceptional construction is built on a foundation of trust,
-              quality, and clear communication. From the initial consultation to the
-              final walkthrough, we work closely with our clients to ensure their vision
-              becomes reality.
+              {t('about.team')}
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              {t('about.values')}
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
               {values.map((value) => (

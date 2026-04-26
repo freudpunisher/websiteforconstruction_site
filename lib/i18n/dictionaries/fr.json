@@ -1,0 +1,180 @@
+{
+    "nav": {
+        "services": "Services",
+        "about": "À Propos",
+        "projects": "Projets",
+        "process": "Notre Processus",
+        "gallery": "Galerie",
+        "articles": "Articles",
+        "contact": "Contact",
+        "quote": "Obtenir un Devis"
+    },
+    "hero": {
+        "badge": "Partenaire de Construction de Confiance Depuis 1999",
+        "title": "Construisez Votre Vision avec",
+        "titleAccent": "Précision & Excellence",
+        "description": "De la conception à la réalisation, Ecobus Construction offre des services de construction commerciale et résidentielle exceptionnels.",
+        "ctaPrimary": "Démarrer Votre Projet",
+        "ctaSecondary": "Nos Réalisations",
+        "experience": "25+ Ans d'Expérience",
+        "projects": "500+ Projets Terminés",
+        "licensed": "Agréé & Assuré"
+    },
+    "services": {
+        "title": "Les Services Offerts par Ecobus",
+        "description": "Une expertise pluridisciplinaire au service de vos projets de construction, d'aménagement et de fourniture technique.",
+        "items": [
+            {
+                "title": "Construction et Travaux Publics",
+                "description": "Secteur public et privé : routes, ponts et aménagements urbains réalisés avec excellence."
+            },
+            {
+                "title": "Bâtiments et Infrastructures",
+                "description": "Réalisation d'infrastructures administratives, scolaires, sanitaires et complexes sportifs."
+            },
+            {
+                "title": "Maisons Individuelles",
+                "description": "Conception et construction de maisons de rêve pour particuliers avec des finitions premium."
+            },
+            {
+                "title": "Études Techniques et Expertise",
+                "description": "Études approfondies et expertise technique des infrastructures pour une sécurité maximale."
+            },
+            {
+                "title": "Conception, Suivi et Contrôle",
+                "description": "Gestion complète de projets, de la conception initiale au contrôle rigoureux des travaux."
+            },
+            {
+                "title": "Importation et Matériaux",
+                "description": "Importation et commercialisation de matériaux de construction et équipements de pointe."
+            },
+            {
+                "title": "Fourniture de Matériels",
+                "description": "Équipements de bureau, informatique, consommables et matériel technique de construction."
+            },
+            {
+                "title": "Véhicules et Engins",
+                "description": "Fourniture de véhicules, d'engins de chantier et de groupes électrogènes haute performance."
+            },
+            {
+                "title": "Conseils en Gestion de Projets",
+                "description": "Services techniques et conseils stratégiques pour optimiser la gestion de vos projets."
+            },
+            {
+                "title": "Assistance Technique",
+                "description": "Accompagnement et assistance technique personnalisée aux maîtres d'ouvrage."
+            },
+            {
+                "title": "Location et Immobilier",
+                "description": "Location de véhicules, d'entrepôts, de bureaux et de maisons à usage d'habitation."
+            }
+        ]
+    },
+    "about": {
+        "badge": "À Propos d'Ecobus",
+        "title": "L'Excellence du Bâtiment Depuis 1999",
+        "description": "Depuis plus de deux décennies, Ecobus Construction est le partenaire de confiance pour les projets de construction commerciale et résidentielle dans toute la région.",
+        "team": "Notre équipe de plus de 150 professionnels qualifiés apporte expertise, dévouement et innovation à chaque projet.",
+        "values": "Nous croyons qu'une construction exceptionnelle repose sur une base de confiance, de qualité et de communication claire.",
+        "stats": {
+            "years": "Ans d'Excellence",
+            "team": "Membres d'Équipe",
+            "projects": "Projets Terminés",
+            "satisfaction": "Satisfaction Client"
+        },
+        "principles": [
+            "Engagement envers la qualité artisanale",
+            "Communication transparente tout au long du projet",
+            "Pratiques et matériaux durables",
+            "Approche axée sur la sécurité",
+            "Respect des délais et des budgets",
+            "Relations à long terme avec nos partenaires"
+        ]
+    },
+    "footer": {
+        "newsletter": "Abonnez-vous à notre Newsletter",
+        "placeholder": "Entrez votre email",
+        "subscribe": "S'abonner",
+        "rights": "Tous droits réservés.",
+        "privacy": "Politique de Confidentialité",
+        "terms": "Conditions d'Utilisation",
+        "licenses": "Licences"
+    },
+    "projects": {
+        "badge": "Notre Portfolio",
+        "title": "Projets de Référence",
+        "description": "Explorez notre portfolio diversifié de projets achevés illustrant notre engagement envers l'excellence.",
+        "categories": {
+            "all": "Tous",
+            "commercial": "Commercial",
+            "residential": "Résidentiel",
+            "renovation": "Rénovation"
+        }
+    },
+    "process": {
+        "badge": "Comment Nous Travaillons",
+        "title": "Notre Processus Éprouvé",
+        "description": "Une approche simplifiée qui garantit transparence, qualité et réussite de la livraison du projet.",
+        "steps": [
+            {
+                "title": "Consultation",
+                "description": "Nous commençons par une consultation détaillée pour comprendre votre vision, vos exigences et votre budget."
+            },
+            {
+                "title": "Conception & Planification",
+                "description": "Notre équipe de conception crée des plans détaillés et des visualisations 3D pour assurer un processus fluide."
+            },
+            {
+                "title": "Construction",
+                "description": "Exécution experte avec des mises à jour régulières et des contrôles de qualité rigoureux."
+            },
+            {
+                "title": "Achèvement",
+                "description": "Inspection finale approfondie pour s'assurer que chaque détail répond à nos normes élevées."
+            }
+        ]
+    },
+    "contact": {
+        "badge": "Contactez-nous",
+        "title": "Démarrez Votre Projet Aujourd'hui",
+        "description": "Prêt à donner vie à votre projet de construction ? Contactez-nous pour une consultation gratuite.",
+        "form": {
+            "title": "Demander un Devis",
+            "description": "Remplissez le formulaire ci-dessous et notre équipe vous recontactera sous 24 heures.",
+            "firstName": "Prénom",
+            "lastName": "Nom",
+            "email": "Email",
+            "phone": "Téléphone",
+            "projectType": "Type de Projet",
+            "projectPlaceholder": "Sélectionnez le type de projet",
+            "details": "Détails du Projet",
+            "detailsPlaceholder": "Parlez-nous de votre projet, délais et exigences...",
+            "submit": "Envoyer la Demande",
+            "sending": "Envoi en cours...",
+            "successTitle": "Merci !",
+            "successMessage": "Nous avons bien reçu votre message et nous vous contacterons sous peu.",
+            "anotherMessage": "Envoyer un autre message"
+        },
+        "info": {
+            "visit": "Visitez-nous",
+            "call": "Appelez-nous",
+            "email": "Email",
+            "hours": "Heures d'Ouverture",
+            "days": {
+                "mon_fri": "Lun - Ven",
+                "sat": "Sam"
+            }
+        }
+    },
+    "gallery": {
+        "title": "Notre Galerie",
+        "description": "Explorez nos derniers travaux de construction et nos projets en cours.",
+        "viewProject": "Voir le Projet"
+    },
+    "articles": {
+        "title": "Derniers Articles",
+        "description": "Perspectives, actualités de l'industrie et conseils d'experts de notre équipe de professionnels chevronnés.",
+        "viewAll": "Voir Tous les Articles",
+        "readMore": "Lire l'Article"
+    }
+}

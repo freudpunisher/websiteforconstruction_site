@@ -1,0 +1,180 @@
+{
+    "nav": {
+        "services": "Services",
+        "about": "About",
+        "projects": "Projects",
+        "process": "Our Process",
+        "gallery": "Gallery",
+        "articles": "Articles",
+        "contact": "Contact",
+        "quote": "Get a Quote"
+    },
+    "hero": {
+        "badge": "Trusted Construction Partner Since 1999",
+        "title": "Building Your Vision with",
+        "titleAccent": "Precision & Excellence",
+        "description": "From concept to completion, Ecobus Construction delivers exceptional commercial and residential construction services. We transform your ideas into reality.",
+        "ctaPrimary": "Start Your Project",
+        "ctaSecondary": "View Our Work",
+        "experience": "25+ Years Experience",
+        "projects": "500+ Projects Completed",
+        "licensed": "Licensed & Insured"
+    },
+    "services": {
+        "title": "Services Offered by Ecobus",
+        "description": "Multidisciplinary expertise at the service of your construction, development, and technical supply projects.",
+        "items": [
+            {
+                "title": "Construction and Public Works",
+                "description": "Public and private sector: roads, bridges and urban developments carried out with excellence."
+            },
+            {
+                "title": "Buildings and Infrastructure",
+                "description": "Realization of administrative, school, health infrastructure and sports complexes."
+            },
+            {
+                "title": "Individual Houses",
+                "description": "Design and construction of dream homes for individuals with premium finishes."
+            },
+            {
+                "title": "Technical Studies and Expertise",
+                "description": "In-depth studies and technical expertise of infrastructure for maximum safety."
+            },
+            {
+                "title": "Design, Monitoring and Control",
+                "description": "Complete project management, from initial design to rigorous monitoring of works."
+            },
+            {
+                "title": "Import and Materials",
+                "description": "Import and marketing of construction materials and state-of-the-art equipment."
+            },
+            {
+                "title": "Supply of Equipment",
+                "description": "Office, IT, consumables and technical construction equipment supply."
+            },
+            {
+                "title": "Vehicles and Machinery",
+                "description": "Supply of vehicles, construction machinery and high-performance generators."
+            },
+            {
+                "title": "Project Management Consulting",
+                "description": "Technical services and strategic advice to optimize the management of your projects."
+            },
+            {
+                "title": "Technical Assistance",
+                "description": "Personalized technical accompaniment and assistance to project owners."
+            },
+            {
+                "title": "Rental and Real Estate",
+                "description": "Rental of vehicles, warehouses, offices and houses for residential use."
+            }
+        ]
+    },
+    "about": {
+        "badge": "About Ecobus",
+        "title": "Building Excellence Since 1999",
+        "description": "For over two decades, Ecobus Construction has been the trusted partner for commercial and residential construction projects across the region.",
+        "team": "Our team of 150+ skilled professionals brings expertise, dedication, and innovation to every project we undertake.",
+        "values": "We believe that exceptional construction is built on a foundation of trust, quality, and clear communication.",
+        "stats": {
+            "years": "Years of Excellence",
+            "team": "Team Members",
+            "projects": "Projects Completed",
+            "satisfaction": "Client Satisfaction"
+        },
+        "principles": [
+            "Commitment to quality craftsmanship",
+            "Transparent communication",
+            "Sustainable building practices",
+            "Safety-first approach",
+            "On-time delivery and budget adherence",
+            "Long-term relationships"
+        ]
+    },
+    "footer": {
+        "newsletter": "Subscribe to Our Newsletter",
+        "placeholder": "Enter your email",
+        "subscribe": "Subscribe",
+        "rights": "All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "licenses": "Licenses"
+    },
+    "projects": {
+        "badge": "Our Portfolio",
+        "title": "Featured Projects",
+        "description": "Explore our diverse portfolio of completed projects showcasing our commitment to excellence.",
+        "categories": {
+            "all": "All",
+            "commercial": "Commercial",
+            "residential": "Residential",
+            "renovation": "Renovation"
+        }
+    },
+    "process": {
+        "badge": "How We Work",
+        "title": "Our Proven Process",
+        "description": "A streamlined approach that ensures transparency, quality, and successful project delivery.",
+        "steps": [
+            {
+                "title": "Consultation",
+                "description": "We start with a detailed consultation to understand your vision, requirements, and budget."
+            },
+            {
+                "title": "Design & Planning",
+                "description": "Our design team creates detailed plans and 3D visualizations to ensure a smooth build process."
+            },
+            {
+                "title": "Construction",
+                "description": "Expert execution with regular progress updates and quality checkpoints."
+            },
+            {
+                "title": "Completion",
+                "description": "Thorough final inspection to ensure every detail meets our high standards."
+            }
+        ]
+    },
+    "contact": {
+        "badge": "Get In Touch",
+        "title": "Start Your Project Today",
+        "description": "Ready to bring your construction project to life? Contact us for a free consultation.",
+        "form": {
+            "title": "Request a Quote",
+            "description": "Fill out the form below and our team will get back to you within 24 hours.",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone",
+            "projectType": "Project Type",
+            "projectPlaceholder": "Select project type",
+            "details": "Project Details",
+            "detailsPlaceholder": "Tell us about your project, timeline, and any specific requirements...",
+            "submit": "Submit Request",
+            "sending": "Sending...",
+            "successTitle": "Thank You!",
+            "successMessage": "We've received your message and will be in touch shortly.",
+            "anotherMessage": "Send Another Message"
+        },
+        "info": {
+            "visit": "Visit Us",
+            "call": "Call Us",
+            "email": "Email Us",
+            "hours": "Business Hours",
+            "days": {
+                "mon_fri": "Mon - Fri",
+                "sat": "Sat"
+            }
+        }
+    },
+    "gallery": {
+        "title": "Our Gallery",
+        "description": "Explore our latest construction works and ongoing projects from across our portfolio.",
+        "viewProject": "View Project"
+    },
+    "articles": {
+        "title": "Latest Articles",
+        "description": "Insights, industry news, and expert tips from our team of seasoned professionals.",
+        "viewAll": "View All Articles",
+        "readMore": "Read Article"
+    }
+}
