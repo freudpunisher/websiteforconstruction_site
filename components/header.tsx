@@ -34,7 +34,7 @@ export function Header() {
   const services = (t('services.items') as any[]) || []
 
   return (
-    <header className="fixed top-0 z-[100] w-full bg-white border-b border-zinc-200 h-20 shadow-sm">
+    <header className="fixed top-0 z-[100] w-full bg-white border-b border-zinc-200 h-35 shadow-sm">
       <div className="container mx-auto flex h-full items-center justify-between px-4 lg:px-8">
         {/* LOGO SECTION */}
         <Link href="/#hero" className="flex items-center relative z-[110]">
