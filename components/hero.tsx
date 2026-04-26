@@ -79,7 +79,7 @@ export function Hero() {
             <span className="text-primary-foreground underline decoration-primary underline-offset-8 decoration-4">Precision & Excellence</span>
           </h1>
           <p className="text-lg leading-relaxed text-white/90 text-pretty lg:text-xl font-medium max-w-2xl">
-            From concept to completion, BuildCraft Construction delivers exceptional
+            From concept to completion, Ecobus Construction delivers exceptional
             commercial and residential construction services. We transform your ideas
             into reality with unmatched craftsmanship and attention to detail.
           </p>

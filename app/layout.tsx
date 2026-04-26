@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'BuildCraft Construction | Premium Building Solutions',
-  description: 'BuildCraft Construction delivers exceptional commercial and residential construction services. With 25+ years of experience, we transform visions into reality with precision and excellence.',
+  title: 'Ecobus Construction | Premium Building Solutions',
+  description: 'Ecobus Construction delivers exceptional commercial and residential construction services. With 25+ years of experience, we transform visions into reality with precision and excellence.',
   keywords: ['construction', 'building', 'commercial construction', 'residential construction', 'renovation', 'general contractor'],
   generator: 'v0.app',
   icons: {
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'BuildCraft Construction | Premium Building Solutions',
-    description: 'BuildCraft Construction delivers exceptional commercial and residential construction services.',
+    title: 'Ecobus Construction | Premium Building Solutions',
+    description: 'Ecobus Construction delivers exceptional commercial and residential construction services.',
     type: 'website',
   },
 }

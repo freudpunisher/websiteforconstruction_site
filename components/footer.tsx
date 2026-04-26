@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { HardHat, Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react"
+import { Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -94,15 +95,20 @@ export function Footer() {
           </div>
 
           <div className="lg:pl-8">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <HardHat className="h-6 w-6 text-primary-foreground" />
+            <div className="flex items-center mb-6">
+              <div className="flex h-16 w-auto items-center justify-center overflow-hidden">
+                <Image
+                  src="/assets/icon/ecobus.png"
+                  alt="ECOBUS logo"
+                  width={180}
+                  height={60}
+                  className="h-14 w-auto object-contain brightness-0 invert"
+                />
               </div>
-              <span className="text-xl font-bold">BuildCraft</span>
             </div>
             <p className="mb-6 text-sm text-background/70 max-w-md">
               Building excellence since 1999. We&apos;re committed to delivering exceptional
-              construction services with integrity, quality, and innovation.
+              construction architecture with integrity, quality, and innovation.
             </p>
             <div className="mb-6">
               <h3 className="mb-3 text-sm font-semibold">Subscribe to Our Newsletter</h3>
@@ -135,7 +141,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-background/10 pt-8 sm:flex-row">
           <p className="text-sm text-background/50">
-            &copy; {new Date().getFullYear()} BuildCraft Construction. All rights reserved.
+            &copy; {new Date().getFullYear()} Ecobus Construction. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-sm text-background/50 hover:text-primary">

@@ -26,7 +26,7 @@ export function About() {
             <div className="relative aspect-square overflow-hidden rounded-2xl shadow-xl">
               <Image
                 src="/assets/about/team.jpg"
-                alt="BuildCraft construction team on site"
+                alt="Ecobus construction team on site"
                 fill
                 className="object-cover"
               />
@@ -44,14 +44,14 @@ export function About() {
           <div className="flex flex-col gap-6">
             <div>
               <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
-                About BuildCraft
+                About Ecobus
               </p>
               <h2 className="text-3xl font-bold tracking-tight text-balance lg:text-4xl">
                 Building Excellence Since 1999
               </h2>
             </div>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              For over two decades, BuildCraft Construction has been the trusted partner
+              For over two decades, Ecobus Construction has been the trusted partner
               for commercial and residential construction projects across the region.
               Our team of 150+ skilled professionals brings expertise, dedication, and
               innovation to every project we undertake.

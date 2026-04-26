@@ -12,7 +12,7 @@ export function CTA() {
               Ready to Build Something Extraordinary?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/90 text-pretty">
-              Let&apos;s discuss your project and discover how BuildCraft can turn your
+              Let&apos;s discuss your project and discover how Ecobus can turn your
               vision into reality. Get your free consultation today.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
