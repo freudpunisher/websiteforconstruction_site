@@ -123,16 +123,41 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-white border-l border-zinc-200 p-0">
               <div className="flex flex-col h-full pt-16 px-6">
-                <nav className="flex flex-col gap-6">
+                <nav className="flex flex-col gap-6 overflow-y-auto pb-10">
                   {navItems.map((item) => (
-                    <Link
-                      key={item.label}
-                      href={item.href}
-                      className="text-lg font-bold uppercase tracking-wider text-zinc-900 hover:text-sky-500"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
+                    <div key={item.label}>
+                      {item.isDropdown ? (
+                        <div className="flex flex-col">
+                          <button
+                            className="text-lg font-bold uppercase tracking-wider text-zinc-900 group"
+                          >
+                            <Link href={item.href} onClick={() => setIsOpen(false)} className="hover:text-sky-500 py-2 block text-left">
+                              {item.label}
+                            </Link>
+                          </button>
+                          <div className="flex flex-col gap-4 mt-2 pl-4 border-l border-zinc-200 py-2">
+                            {services.map((service, index) => (
+                              <Link
+                                key={service.title}
+                                href={`/services/${index}`}
+                                className="text-[11px] font-bold text-zinc-600 hover:text-sky-500 uppercase tracking-widest leading-relaxed"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                {service.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          className="block text-lg font-bold uppercase tracking-wider text-zinc-900 hover:text-sky-500 py-2"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
                   ))}
                 </nav>
               </div>

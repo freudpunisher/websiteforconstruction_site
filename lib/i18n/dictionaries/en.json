@@ -10,14 +10,14 @@
         "quote": "Get a Quote"
     },
     "hero": {
-        "badge": "Trusted Construction Partner Since 1999",
+        "badge": "Trusted Construction Partner Since 2019",
         "title": "Building Your Vision with",
         "titleAccent": "Precision & Excellence",
         "description": "From concept to completion, Ecobus Construction delivers exceptional commercial and residential construction services. We transform your ideas into reality.",
         "ctaPrimary": "Start Your Project",
         "ctaSecondary": "View Our Work",
-        "experience": "25+ Years Experience",
-        "projects": "500+ Projects Completed",
+        "experience": "7+ Years Experience",
+        "projects": "200+ Projects Completed",
         "licensed": "Licensed & Insured"
     },
     "services": {
@@ -72,9 +72,9 @@
     },
     "about": {
         "badge": "About Ecobus",
-        "title": "Building Excellence Since 1999",
-        "description": "For over two decades, Ecobus Construction has been the trusted partner for commercial and residential construction projects across the region.",
-        "team": "Our team of 150+ skilled professionals brings expertise, dedication, and innovation to every project we undertake.",
+        "title": "Building Excellence Since 2019",
+        "description": "For several years, Ecobus Construction has been the trusted partner for commercial and residential construction projects across the region.",
+        "team": "Our team of skilled professionals brings expertise, dedication, and innovation to every project we undertake.",
         "values": "We believe that exceptional construction is built on a foundation of trust, quality, and clear communication.",
         "stats": {
             "years": "Years of Excellence",

@@ -62,7 +62,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs font-medium tracking-wide">
-              Building the future, restoring the past. Excelence in construction since 1999.
+              Building the future, restoring the past. Excellence in construction since 2019.
             </p>
             <div className="flex gap-5">
               {socialLinks.map((social) => (
