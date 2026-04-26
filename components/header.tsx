@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Phone, Menu } from "lucide-react"
 import { useTranslation } from "@/lib/i18n/context"
-import { Globe } from "lucide-react"
 import Image from "next/image"
 import {
   Select,
@@ -136,9 +135,22 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="flex flex-col gap-4 pt-4 border-t">
-                  <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-primary" />
-                    <span className="font-medium text-nowrap">(555) 123-4567</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Phone className="h-4 w-4 text-primary" />
+                      <span className="font-medium text-nowrap">(555) 123-4567</span>
+                    </div>
+                    <Select value={locale} onValueChange={(value) => setLocale(value as 'fr' | 'en')}>
+                      <SelectTrigger className="w-[80px] h-9 rounded-lg bg-gray-100 border-none shadow-none focus:ring-0">
+                        <SelectValue>
+                          {locale === 'fr' ? '🇫🇷' : '🇺🇸'}
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent position="popper" align="end">
+                        <SelectItem value="fr">🇫🇷 FR</SelectItem>
+                        <SelectItem value="en">🇺🇸 EN</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                   <Button asChild className="w-full" onClick={() => setIsOpen(false)}>
                     <Link href="#contact">{t('nav.quote')}</Link>

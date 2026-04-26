@@ -1,3 +1,5 @@
+"use client"
+
 import { MessageSquare, Pencil, HardHat, CheckCircle, ArrowRight } from "lucide-react"
 
 const steps = [

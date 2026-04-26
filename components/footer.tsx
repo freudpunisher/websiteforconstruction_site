@@ -1,4 +1,11 @@
+"use client"
+
+import Link from "next/link"
+import Image from "next/image"
 import { useTranslation } from "@/lib/i18n/context"
+import { Facebook, Twitter, Linkedin, Instagram, Mail } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },

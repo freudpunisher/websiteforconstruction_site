@@ -41,16 +41,20 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+import { LanguageProvider } from '@/lib/i18n/context'
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background scroll-smooth">
+    <html lang="fr" className="bg-background scroll-smooth">
       <body className="font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <LanguageProvider>
+          {children}
+          {process.env.NODE_ENV === 'production' && <Analytics />}
+        </LanguageProvider>
       </body>
     </html>
   )
